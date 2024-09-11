@@ -1,0 +1,124 @@
+
+<!-- jokaisen HTML tiedoston pitää alkaa DOCTYPE elementillä-->
+<!DOCTYPE html>
+<!-- HTML elementti on HTML dokumentin juurielementti-->
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Viikko 1 - Oppimispäiväkirja</title>
+    <script type="module" src="./assets/components/html-css-viewer.js"></script>
+    
+    <style>
+        /* stylin sisällä on oma kieli css*/
+      body {
+            background-color: beige;
+            width: 100%;
+            max-width: 800px;
+        }
+
+     img {
+            display: block;
+            width:50%;
+            max-width: 50%;
+            /* kuvan koko voidaan säättää % ja px.
+            Sen lisäksi voidaan määrittää marginaalit, tai tehdä kuvasta blokin. 
+            kuva (margin-left: 0 auto)*/
+        }
+
+      .inline-text-img{
+        width: auto;
+        height: 20px
+        display: inline;
+        }
+
+        div{
+            padding: 10px
+        }
+
+        .background1{
+            background: linear-gradient(red, beige);
+            padding: 10px;
+        }
+
+        .background2{
+            background: blueviolet;
+            padding: 50px;
+        }
+    
+    
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div class="background1">
+       <!-- Otsikkoja saa olla 6 eri tasoa, niitä merkitään hi,2,3 jne-->
+        <h1>Viikko 1: Oppimispäiväkirja</h1>
+
+     <div class="background2"> 
+            <h2>HTML perusteet</h2>
+        </div>
+
+        <!-- linkki tehdän näin, valkoisella annetaan title-->
+        <a href="https://hlotvonen.github.io/koe-koodi24/"> Kurssin kotisivu</a>
+        <!-- uusi paragraph alkaa aina uudella rivillä, toinen keino lisätä välilyöntejä on <b></b> ja <br>-->
+        <h2> Tiistai</h2>
+        <p> skillipuu
+            <br> protokolla- ohje joka selittää koneille, miten data käsitellään
+            <br>Internet protokol-TCP/IP
+            <br>IP- konen osoite (numero) 
+            <br>Domain - on sama kuin IP, mutta nimi muodossa esim grrr-ry:fi
+            <br>DNS- muuttaa IP domainiksi 
+            <br>HTML - Hypertext markup language
+            <br>http -> ht (hypertext) tp (protocol)
+            <br>http protokollan mukaisen pyynnön ip osoitteeseen
+        
+            <h2> Internetin perusteet</h2>
+            <ol>
+                <li> HTTP pyyntö
+                <li> DNS lookup
+                <li> HTML ok (404 - tiedostoa ei ole)
+                <li> lukee HTML tiedoston
+                <li> render HTML</p>
+                </li>
+        <!-- kuva lisätään kirjoittamalla img, piste ja polkku suhteessa siihen missä html tiedosto löytyy-->
+        <img src="./assets/img/Alogo.jpg">
+
+        <!-- unordered list-->
+
+        <ul>
+            <!--jokaisen li- ei ole pakko sulkea vaan lopussa tulee olla sulkeva /li-->
+            <h3> Unordered list</h3>
+            <li> H1-H6 tagit 
+            <li> p tagi on leipätekstille </li>
+        </ul>
+
+        <!-- ordered list-->
+        <ol>
+            <h3> Ordered list </h3>
+            <li> eka
+            <li> toka
+            <li> kolmas
+            </li>
+        </ol>
+
+        <button> 
+            booom 
+        </button>
+    
+
+    </div>
+
+    <h2>Reflektio:</h2>
+    <p>[Reflektoi oppimaasi, sekä pohdi viikon aikana käsiteltyjä asioita]</p>
+    
+    <nav>
+        <a href="viikkoX-1.html">← Edellinen viikko</a> |
+        <a href="viikkoX+1.html">Seuraava viikko →</a>
+    </nav>
+    
+</body>
+</html>
