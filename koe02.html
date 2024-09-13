@@ -1,82 +1,16 @@
-
-<!-- jokaisen HTML tiedoston pitää alkaa DOCTYPE elementillä-->
 <!DOCTYPE html>
-<!-- HTML elementti on HTML dokumentin juurielementti-->
-<html lang="fi">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <title>Viikko 1 - Oppimispäiväkirja</title>
-    <script type="module" src="./assets/components/html-css-viewer.js"></script>
-    
-    <style>
-        /* stylin sisällä on oma kieli css*/
-      body {
-            background-color: beige;
-            width: 100%;
-            
-        }
-
-     img {
-            max-width:100%;
-            /* kuvan koko voidaan säättää % ja px.
-            Sen lisäksi voidaan määrittää marginaalit, tai tehdä kuvasta blokin. 
-            kuva (margin-left: 0 auto)*/
-        }
-
-
-      .flex {
-        display: flex;
-      }
-      .flex div {
-        flex:1;
-      }
-
-.loppuosa {
-  display: flex;
-  background: white;
-}
-.loppuosa div{
-  
-  flex: 1;
-  padding: 20px;
-
-}
-      
-
-        .background1{
-            background: linear-gradient(red, beige);
-            padding: 30px;
-        }
-
-        .background2{
-            background: var(--color6);
-            padding: 30px;
-        }
-
-      .leipateksti{
-        background-color: blue;
-        padding: 30px;
-      }
-
-      p{
-        margin-left: 30px;
-      }
-   
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Grid Drawing</title>
+  </head>
+  <style>
     body, html, a {
       height:100%;
       width:100%;
-      
+      margin:0;
     }
-    h1,h2{
-      color: white;
-    }
-
-.next{
-  background-color: blue;
-  padding-top: 20px;
-}
-    
     :root {
     --color1: lch(0 0 0);
     --color2: lch(70 50 20);
@@ -152,15 +86,10 @@ background:var(--color4);
 background:var(--color6);
 }
 
-
-    
-    </style>
-</head>
-
-<body>
-
-  <div class="grid-container" style="grid-template-columns: repeat(50, 1fr); grid-template-rows: repeat(50, 1fr)">
-    <div style="grid-area: 30 / 16 / 33 / 18;" class="shapeContainer"><div class="shape left-chevron defaultpattern1 "></div></div>
+  </style>
+  <body>
+    <div class="grid-container" style="grid-template-columns: repeat(50, 1fr); grid-template-rows: repeat(50, 1fr)">
+      <div style="grid-area: 30 / 16 / 33 / 18;" class="shapeContainer"><div class="shape left-chevron defaultpattern1 "></div></div>
   <div style="grid-area: 27 / 16 / 30 / 18;" class="shapeContainer"><div class="shape left-chevron defaultpattern1 "></div></div>
   <div style="grid-area: 24 / 16 / 27 / 18;" class="shapeContainer"><div class="shape left-chevron defaultpattern1 "></div></div>
   <div style="grid-area: 21 / 16 / 24 / 18;" class="shapeContainer"><div class="shape left-chevron defaultpattern1 "></div></div>
@@ -216,113 +145,6 @@ background:var(--color6);
   <div style="grid-area: 10 / 29 / 12 / 30;" class="shapeContainer"><div class="shape ellipse pattern-Py_Ri "></div></div>
   <div style="grid-area: 13 / 26 / 15 / 27;" class="shapeContainer"><div class="shape ellipse pattern-Py_Ri "></div></div>
   <div style="grid-area: 35 / 39 / 37 / 40;" class="shapeContainer"><div class="shape ellipse pattern-Py_Ri "></div></div>
-  </div>
-
-  <div class="background1">
-       <!-- Otsikkoja saa olla 6 eri tasoa, niitä merkitään hi,2,3 jne-->
-
-         <!-- linkki tehdän näin, valkoisella annetaan title-->
-    <a href="https://hlotvonen.github.io/koe-koodi24/"> Kurssin kotisivu
-    </a>
-       
-    <h1>Ulianan oppimispäiväkirja
-    </h1>
-
-    <div class="background2"> 
-        <h2>Viikko 1
-      </h2>
     </div>
-
-       
-        <!-- uusi paragraph alkaa aina uudella rivillä, toinen keino lisätä välilyöntejä on <b></b> ja <br>-->
-       
-      
-    <div class="leipateksti">
-          <h2> Teorettiset asiat</h2>
-
-           <p> skillipuu
-            <br> protokolla- ohje joka selittää koneille, miten data käsitellään
-            <br>Internet protokol-TCP/IP
-            <br>IP- konen osoite (numero) 
-            <br>Domain - on sama kuin IP, mutta nimi muodossa esim grrr-ry:fi
-            <br>DNS- muuttaa IP domainiksi 
-            <br>HTML - Hypertext markup language
-            <br>http -> ht (hypertext) tp (protocol)
-            <br>http protokollan mukaisen pyynnön ip osoitteeseen
-        
-            <h2> Internetin perusteet</h2>
-            <ol>
-                <li> HTTP pyyntö
-                <li> DNS lookup
-                <li> HTML ok (404 - tiedostoa ei ole)
-                <li> lukee HTML tiedoston
-                <li> render HTML</p>
-                </li>
-              </p>
-       </div>
-    
-       
-        <!-- kuva lisätään kirjoittamalla img, piste ja polkku suhteessa siihen missä html tiedosto löytyy-->
-        <div class="flex">
-          <div>
-            <img src="assets/img/logo01.webp">
-          </div>
-          <div>
-            <h2> Internetti on muuttanut opiskelutapoja todella paljon </h2>
-          </div>
-          <div>
-            <img src="./assets/img/logo02.webp">
-          </div>
-        </div>
-        
-        <!-- unordered list-->
-
-        <ul>
-            <!--jokaisen li- ei ole pakko sulkea vaan lopussa tulee olla sulkeva /li-->
-            <h3> Koodamisen käytännölliset asiat, jotka olen harjoittelut tällä viikolla</h3>
-            <li> Nettisivun jako (head&body),(html&css)
-            <li>GitHubin käyttö
-            <li>tagit ja informaation järjestäminen koodi sisällä
-            <li>tekstin luominen </li>
-            <li>div- jaottelu ja taustavärin valitseminen eri osille 
-            <li> kuvan liittäminen 
-            <li> linkkin liittäminen 
-               </li>
-               
-        </ul>
-
-
-    </div>
-    <div class="loppuosa">
-      
-      <div>
-        <nav> 
-          <a href="index.html">
-            <h4>
-              Viikko valikko
-            </h4>
-          </a>
-        </nav>
-      </div>
-
-      <div>
-        <nav>
-          <a href="viikko2.html"> 
-            <h4>
-              Viikko 2 →
-            </h4>
-          </a>  
-        </nav>
-      </div>  
-
-    </div>
-
-    <div class="next">
-      </div>
-
-    </div>
-
-
-
-</body>
+  </body>
 </html>
